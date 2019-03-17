@@ -1,6 +1,8 @@
 import cv2
 
-camera = cv2.VideoCapture(0) #0 default camera
+camera = cv2.VideoCapture(0) #0 default camera also we can use another video source like films
+
+face_clsfr = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 while(True):
     ret,frame = camera.read()
